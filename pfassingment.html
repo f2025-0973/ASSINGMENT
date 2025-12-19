@@ -1,0 +1,17 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<int> v1 = {1, 2, 3, 4, 5};
+    vector<int> v2 = {2, 1, 5, 3};  // missing 4
+
+    int sum1 = 0, sum2 = 0;
+    for(int val : v1) sum1 += val;
+    for(int val : v2) sum2 += val;
+
+    int missing = sum1 - sum2;
+    cout << "Missing element: " << missing << endl;
+
+    return 0;
+}
